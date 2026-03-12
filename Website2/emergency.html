@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>DefenShe | Emergency</title>
+<link rel="stylesheet" href="defenshe.css">
+</head>
+
+<body class="emergency-page">
+
+<div class="background"></div>
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="tips.html">Safety Tips</a>
+<a href="emergency.html">Emergency</a>
+<a href="contacts.html">Contact</a>
+</nav>
+
+<h1>Emergency Help</h1>
+<p class="subtitle">Quick support when you need it most</p>
+
+<div class="emergency-container">
+
+<div class="emergency-card" onclick="showInfo('police')">
+<h3>🚓 Police</h3>
+<p>Dial <strong>100</strong></p>
+</div>
+
+<div class="emergency-card" onclick="showInfo('ambulance')">
+<h3>🚑 Ambulance</h3>
+<p>Dial <strong>108</strong></p>
+</div>
+
+<div class="emergency-card" onclick="showInfo('women')">
+<h3>📞 Women Helpline</h3>
+<p>Dial <strong>181</strong></p>
+</div>
+
+<div class="emergency-card" onclick="showInfo('sos')">
+<h3>🆘 SOS</h3>
+<p>Emergency Alert</p>
+</div>
+
+</div>
+<div id="popup" class="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">×</span>
+<h2 id="popup-title"></h2>
+<p id="popup-text"></p>
+</div>
+</div>
+
+<script>
+
+function showInfo(type){
+
+let title="";
+let text="";
+
+if(type==="police"){
+title="Police Emergency";
+text="Dial 100 to contact the nearest police station.";
+}
+
+else if(type==="ambulance"){
+title="Ambulance Service";
+text="Dial 108 for emergency medical help.";
+}
+
+else if(type==="women"){
+title="Women Helpline";
+text="Dial 181 for women's safety and support.";
+}
+
+else if(type==="sos"){
+title="SOS Alert";
+text="This feature alerts trusted contacts during danger.";
+}
+
+document.getElementById("popup-title").innerText=title;
+document.getElementById("popup-text").innerText=text;
+document.getElementById("popup").style.display="block";
+
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
